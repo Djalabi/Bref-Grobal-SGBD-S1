@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="jumbotron text-center">
+        <h3>Bienvenue sur le blog de la science du logiciel</h3>
+        <p>En tant que développeurs sur ce blog, vous pouvez partager vos articles de blog et aider les gens.</p>
+</div>
+
+
+<p>
+        {% if request.user.is_authenticated %}
+                Connecté, {{request.user.username}}
+        {% else %}
+                Deconnecté
+        {% endif %}
+
+</p>
+{% endblock body %}
+
